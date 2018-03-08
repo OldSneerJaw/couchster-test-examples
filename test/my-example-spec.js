@@ -5,7 +5,7 @@ describe('my example document definitions', function() {
   // Need to initialize the test fixture module the document definitions under test before every test case
   var testFixture;
   beforeEach(function() {
-    testFixture = testFixtureMaker.initFromValidationFunction('build/my-example-validation-function.js');
+    testFixture = testFixtureMaker.initFromDocumentDefinitions('src/my-example-doc-definitions.js');
   });
 
   it('should consider the document valid when all constraints are met', function() {
