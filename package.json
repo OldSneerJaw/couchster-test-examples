@@ -1,0 +1,14 @@
+{
+  "name": "couchster-test-examples",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "couchster": "^0.2.0",
+    "mocha": "^5.0.4"
+  },
+  "scripts": {
+    "build": "couchster src/my-example-doc-definitions.js build/my-example-validation-function.js",
+    "clean": "rm -rf build",
+    "test": "npm run validate && npm run build && mocha",
+    "validate": "couchster-validate src/my-example-doc-definitions.js"
+  }
+}
