@@ -2,7 +2,7 @@
 var testFixtureMaker = require('couchster').testFixtureMaker;
 
 describe('my example document definitions', function() {
-  // Need to initialize the test fixture module the document definitions under test before every test case
+  // Need to initialize the test fixture module from the document definitions under test before every test case
   var testFixture;
   beforeEach(function() {
     testFixture = testFixtureMaker.initFromDocumentDefinitions('src/my-example-doc-definitions.js');
@@ -13,7 +13,7 @@ describe('my example document definitions', function() {
       _id: 'my-document-id',
       type: 'exampleDoc',
       foo: 'bar'
-    }
+    };
 
     testFixture.verifyDocumentCreated(doc, [ 'write-' + doc._id ]);
   });
@@ -23,7 +23,7 @@ describe('my example document definitions', function() {
       _id: 'my-document-id',
       type: 'exampleDoc',
       foo: 'invalid'
-    }
+    };
 
     testFixture.verifyDocumentNotCreated(
       doc,
