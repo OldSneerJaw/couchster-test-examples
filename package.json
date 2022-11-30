@@ -3,7 +3,7 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "couchster": "^1.2.1",
-    "mocha": "^8.3.2"
+    "mocha": "^10.1.0"
   },
   "scripts": {
     "build": "npm run validate && couchster --json-string src/my-example-doc-definitions.js build/my-example-validation-function.txt",
